@@ -15,12 +15,20 @@ func _on_ingredient_boba_add_boba() -> void:
 	else:
 		boba.visible = false
 		counterBoba=0
-
+var colors=["ffbcabff", "ffc69eff", "ffe89eff", "e7ff9eff", "9effaeff", "9effefff", "9eddffff", "bdc1ffff", "dcbdffff", "ffbde8ff", "d4aa77ff", "241603ff", "120b06ff"]
 @onready var tea = $addedTea
+var i=(colors.size()-1)
 func _on_ingredient_tea_base_add_tea() -> void:
 	if counterTea==0:
 		tea.visible=true
 		counterTea+=1
-	elif counterTea!=7:
-		tea.modulate=Color(1,1,0.5)
+	elif counterTea!=(colors.size()-1):
+		tea.modulate=Color(colors[i])
+		i-=1
+		counterTea+=1
+	else:
+		tea.visible=false
+		i=(colors.size()-1)
+		counterTea=0
+		
 		
