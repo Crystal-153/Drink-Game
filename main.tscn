@@ -3,13 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://buaav1pyb6vh" path="res://CounterPicturesDrawings/pixilart-drawing.png" id="1_4c57u"]
 [ext_resource type="Script" uid="uid://fri2sqdhoukt" path="res://ingredient_boba.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b7i8brr32pwkt" path="res://CounterPicturesDrawings/pixil-layer-4.png" id="2_efxa6"]
-[ext_resource type="PackedScene" uid="uid://bhrcw0d6vxqfy" path="res://scenes/main_drink.tscn" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c7l7ntvhgda7h" path="res://CounterPicturesDrawings/pixil-layer-3.png" id="4_dg77c"]
 [ext_resource type="Texture2D" uid="uid://x0i50he1ows1" path="res://CounterPicturesDrawings/pixil-layer-2.png" id="5_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://c4entan1sw5t4" path="res://CounterPicturesDrawings/pixil-layer-1.png" id="6_w48qg"]
 [ext_resource type="Texture2D" uid="uid://usbfwphnvdv3" path="res://CounterPicturesDrawings/pixil-layer-5.png" id="7_vivmo"]
 [ext_resource type="Texture2D" uid="uid://hv20qf56sdne" path="res://CounterPicturesDrawings/pixil-layer-0.png" id="8_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://dega7jp5e30tg" path="res://MainDrinkPicturesDrawings/pixil-layer-0.png" id="9_yaehf"]
+[ext_resource type="PackedScene" uid="uid://cp0gywtq0wpj1" path="res://drink(main).tscn" id="10_4c57u"]
 
 [node name="Node" type="Node" unique_id=1421395882]
 
@@ -118,9 +118,8 @@ offset_right = 1097.0
 offset_bottom = 610.0
 text = "Redo"
 
-[node name="mainDrink" parent="." unique_id=1457769839 instance=ExtResource("2_h2yge")]
-position = Vector2(527.00006, 393.99997)
-scale = Vector2(2.1699996, 2.0599995)
+[node name="Node2D" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
+position = Vector2(631, 498)
+scale = Vector2(2.4, 2.4)
 
-[connection signal="add_Boba" from="ingredientBoba" to="mainDrink" method="_on_ingredient_boba_add_boba"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]

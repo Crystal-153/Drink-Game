@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cp0gywtq0wpj1"]
+
+[ext_resource type="Texture2D" uid="uid://bc0jlge07fc3e" path="res://MainDrinkPicturesDrawings/pixil-layer-8.png" id="1_u8dwn"]
+[ext_resource type="Texture2D" uid="uid://b71apm72suxy4" path="res://MainDrinkPicturesDrawings/pixil-layer-2.png" id="2_aico8"]
+[ext_resource type="Texture2D" uid="uid://0axvu3ip8d75" path="res://MainDrinkPicturesDrawings/pixil-layer-3.png" id="3_w7esa"]
+[ext_resource type="Texture2D" uid="uid://ctxxu602fxky2" path="res://MainDrinkPicturesDrawings/pixil-layer-6.png" id="4_khk5n"]
+[ext_resource type="Texture2D" uid="uid://cofd6jh1nvgqw" path="res://MainDrinkPicturesDrawings/pixil-layer-1.png" id="5_tlu8k"]
+[ext_resource type="Texture2D" uid="uid://xc34kl0gyqld" path="res://MainDrinkPicturesDrawings/pixil-layer-4.png" id="6_susfe"]
+[ext_resource type="Texture2D" uid="uid://sut0h477y2wi" path="res://MainDrinkPicturesDrawings/pixil-layer-5.png" id="7_tnd6t"]
+[ext_resource type="Texture2D" uid="uid://timo844n2skg" path="res://MainDrinkPicturesDrawings/pixil-layer-7.png" id="8_8qayk"]
+
+[node name="Node2D" type="Node2D" unique_id=228826666]
+
+[node name="drinkOutline" type="Sprite2D" parent="." unique_id=519379090]
+z_index = 6
+texture_filter = 1
+texture = ExtResource("1_u8dwn")
+
+[node name="addedTea" type="Sprite2D" parent="." unique_id=27761852]
+z_index = 1
+texture_filter = 1
+texture = ExtResource("2_aico8")
+
+[node name="addedBoba" type="Sprite2D" parent="." unique_id=1801767537]
+z_index = 2
+texture_filter = 1
+texture = ExtResource("3_w7esa")
+
+[node name="addedWhippedCream" type="Sprite2D" parent="." unique_id=801122971]
+z_index = 2
+texture_filter = 1
+texture = ExtResource("4_khk5n")
+
+[node name="strawOutline" type="Sprite2D" parent="." unique_id=1401476181]
+texture_filter = 1
+texture = ExtResource("5_tlu8k")
+
+[node name="addedPudding" type="Sprite2D" parent="." unique_id=42326411]
+z_index = 3
+texture_filter = 1
+texture = ExtResource("6_susfe")
+
+[node name="addedJelly" type="Sprite2D" parent="." unique_id=1901733976]
+z_index = 4
+texture_filter = 1
+texture = ExtResource("7_tnd6t")
+
+[node name="addedDrizzle" type="Sprite2D" parent="." unique_id=882193955]
+z_index = 5
+texture_filter = 1
+texture = ExtResource("8_8qayk")
