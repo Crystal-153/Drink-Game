@@ -1,8 +1,9 @@
 extends Node2D
-
+#Variablessssssss
 var counterBoba=0
 var counterTea=0
 var counterWhipped=0
+var counterPudding=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,6 +36,7 @@ func _on_ingredient_tea_base_add_tea() -> void:
 		i=(colors.size()-1)
 		counterTea=0
 @onready var whipped = $addedWhippedCream
+#This toggles whipped cream on and off as it doesnt change colors
 func _on_ingredient_whipped_cream_add_whipped() -> void:
 	if counterWhipped==0:
 		whipped.visible=true
@@ -42,3 +44,13 @@ func _on_ingredient_whipped_cream_add_whipped() -> void:
 	else:
 		whipped.visible=false
 		counterWhipped=0
+
+@onready var pudding = $addedPudding
+#This toggles the pudding on and off as pudding will always be yellow
+func _on_ingredient_pudding_add_pudding() -> void:
+	if counterPudding==0:
+		pudding.visible=true
+		counterPudding+=1
+	else:
+		pudding.visible=false
+		counterPudding=0

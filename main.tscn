@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://usbfwphnvdv3" path="res://CounterPicturesDrawings/pixil-layer-5.png" id="7_vivmo"]
 [ext_resource type="Texture2D" uid="uid://hv20qf56sdne" path="res://CounterPicturesDrawings/pixil-layer-0.png" id="8_2cqfq"]
 [ext_resource type="Texture2D" uid="uid://dega7jp5e30tg" path="res://MainDrinkPicturesDrawings/pixil-layer-0.png" id="9_yaehf"]
+[ext_resource type="Script" uid="uid://cn7qbt3x7dk5u" path="res://ingredient_pudding.gd" id="9_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cp0gywtq0wpj1" path="res://drink(main).tscn" id="10_4c57u"]
 
 [node name="Node" type="Node" unique_id=1421395882]
@@ -72,6 +73,7 @@ offset_bottom = 592.0
 texture_normal = ExtResource("6_w48qg")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("9_ycdy4")
 
 [node name="ingredientDrizzle" type="TextureButton" parent="." unique_id=1112204289]
 texture_filter = 1
@@ -132,3 +134,5 @@ scale = Vector2(2, 2)
 [connection signal="pressed" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_pressed"]
 [connection signal="add_whipped" from="ingredientWhippedCream" to="Node2D" method="_on_ingredient_whipped_cream_add_whipped"]
 [connection signal="pressed" from="ingredientWhippedCream" to="ingredientWhippedCream" method="_on_pressed"]
+[connection signal="add_pudding" from="ingredientPudding" to="Node2D" method="_on_ingredient_pudding_add_pudding"]
+[connection signal="pressed" from="ingredientPudding" to="ingredientPudding" method="_on_pressed"]
