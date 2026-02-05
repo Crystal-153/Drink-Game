@@ -4,6 +4,7 @@ var counterBoba=0
 var counterTea=0
 var counterWhipped=0
 var counterPudding=0
+var counterDrizzle=0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -54,3 +55,17 @@ func _on_ingredient_pudding_add_pudding() -> void:
 	else:
 		pudding.visible=false
 		counterPudding=0
+var j=(colors.size()-1)
+@onready var drizzle = $addedDrizzle
+func _on_ingredient_drizzle_add_drizzle() -> void:
+	if counterDrizzle==0:
+		drizzle.visible=true
+		counterDrizzle+=1
+	elif counterDrizzle!=(colors.size()-1):
+		drizzle.modulate=Color(colors[j])
+		j-=1
+		counterDrizzle+=1
+	else:
+		drizzle.visible=false
+		j=(colors.size()-1)
+		counterDrizzle=0
