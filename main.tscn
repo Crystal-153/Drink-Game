@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://bpmrvciu2q13f"]
+
+[ext_resource type="Texture2D" uid="uid://buaav1pyb6vh" path="res://CounterPicturesDrawings/pixilart-drawing.png" id="1_4c57u"]
+[ext_resource type="Script" uid="uid://fri2sqdhoukt" path="res://ingredient_boba.gd" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b7i8brr32pwkt" path="res://CounterPicturesDrawings/pixil-layer-4.png" id="2_efxa6"]
+[ext_resource type="PackedScene" uid="uid://bhrcw0d6vxqfy" path="res://scenes/main_drink.tscn" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://c7l7ntvhgda7h" path="res://CounterPicturesDrawings/pixil-layer-3.png" id="4_dg77c"]
+[ext_resource type="Texture2D" uid="uid://x0i50he1ows1" path="res://CounterPicturesDrawings/pixil-layer-2.png" id="5_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://c4entan1sw5t4" path="res://CounterPicturesDrawings/pixil-layer-1.png" id="6_w48qg"]
+[ext_resource type="Texture2D" uid="uid://usbfwphnvdv3" path="res://CounterPicturesDrawings/pixil-layer-5.png" id="7_vivmo"]
+[ext_resource type="Texture2D" uid="uid://hv20qf56sdne" path="res://CounterPicturesDrawings/pixil-layer-0.png" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://dega7jp5e30tg" path="res://MainDrinkPicturesDrawings/pixil-layer-0.png" id="9_yaehf"]
+
+[node name="Node" type="Node" unique_id=1421395882]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1501283867]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.92941177, 0.8862745, 1, 1)
+
+[node name="counterTop" type="TextureRect" parent="." unique_id=113107902]
+texture_filter = 1
+offset_top = 322.0
+offset_right = 1159.0
+offset_bottom = 652.0
+texture = ExtResource("1_4c57u")
+expand_mode = 1
+
+[node name="ingredientBoba" type="TextureButton" parent="." unique_id=720601012]
+texture_filter = 1
+offset_left = 64.0
+offset_top = 384.0
+offset_right = 144.0
+offset_bottom = 464.0
+texture_normal = ExtResource("2_efxa6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_1bvp3")
+
+[node name="ingredientTeaBase" type="TextureButton" parent="." unique_id=125179865]
+texture_filter = 1
+offset_left = 64.0
+offset_top = 512.0
+offset_right = 144.0
+offset_bottom = 591.0
+texture_normal = ExtResource("4_dg77c")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ingredientWhippedCream" type="TextureButton" parent="." unique_id=1116205214]
+texture_filter = 1
+offset_left = 200.0
+offset_top = 384.0
+offset_right = 280.0
+offset_bottom = 464.0
+texture_normal = ExtResource("5_ycdy4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ingredientPudding" type="TextureButton" parent="." unique_id=1660094166]
+texture_filter = 1
+offset_left = 200.0
+offset_top = 512.0
+offset_right = 280.0
+offset_bottom = 592.0
+texture_normal = ExtResource("6_w48qg")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ingredientDrizzle" type="TextureButton" parent="." unique_id=1112204289]
+texture_filter = 1
+offset_left = 336.0
+offset_top = 384.0
+offset_right = 416.0
+offset_bottom = 464.0
+texture_normal = ExtResource("7_vivmo")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ingredientJelly" type="TextureButton" parent="." unique_id=1809469053]
+texture_filter = 1
+offset_left = 336.0
+offset_top = 512.0
+offset_right = 416.0
+offset_bottom = 592.0
+texture_normal = ExtResource("8_2cqfq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="makingArea" type="TextureRect" parent="." unique_id=1331977361]
+texture_filter = 1
+offset_left = 522.0
+offset_top = 391.0
+offset_right = 747.0
+offset_bottom = 616.0
+texture = ExtResource("9_yaehf")
+
+[node name="serveButton" type="Button" parent="." unique_id=1376925781]
+offset_left = 817.0
+offset_top = 401.0
+offset_right = 1097.0
+offset_bottom = 458.0
+text = "Ready to serve!"
+
+[node name="undoButton" type="Button" parent="." unique_id=73116834]
+offset_left = 817.0
+offset_top = 474.0
+offset_right = 1097.0
+offset_bottom = 531.0
+text = "Undo"
+
+[node name="redoButton" type="Button" parent="." unique_id=1511200930]
+offset_left = 817.0
+offset_top = 553.0
+offset_right = 1097.0
+offset_bottom = 610.0
+text = "Redo"
+
+[node name="mainDrink" parent="." unique_id=1457769839 instance=ExtResource("2_h2yge")]
+position = Vector2(527.00006, 393.99997)
+scale = Vector2(2.1699996, 2.0599995)
+
+[connection signal="add_Boba" from="ingredientBoba" to="mainDrink" method="_on_ingredient_boba_add_boba"]
+[connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]

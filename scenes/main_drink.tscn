@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bhrcw0d6vxqfy"]
+
+[ext_resource type="Script" uid="uid://bw2r65lgglh63" path="res://scenes/main_drink.gd" id="2_3eadh"]
+[ext_resource type="Texture2D" uid="uid://bc0jlge07fc3e" path="res://MainDrinkPicturesDrawings/pixil-layer-8.png" id="2_7xlvn"]
+[ext_resource type="Texture2D" uid="uid://b71apm72suxy4" path="res://MainDrinkPicturesDrawings/pixil-layer-2.png" id="3_bqngi"]
+[ext_resource type="Texture2D" uid="uid://ctxxu602fxky2" path="res://MainDrinkPicturesDrawings/pixil-layer-6.png" id="4_k2rwk"]
+[ext_resource type="Texture2D" uid="uid://0axvu3ip8d75" path="res://MainDrinkPicturesDrawings/pixil-layer-3.png" id="5_qicav"]
+[ext_resource type="Texture2D" uid="uid://cofd6jh1nvgqw" path="res://MainDrinkPicturesDrawings/pixil-layer-1.png" id="6_tya4l"]
+[ext_resource type="Texture2D" uid="uid://xc34kl0gyqld" path="res://MainDrinkPicturesDrawings/pixil-layer-4.png" id="7_msr0w"]
+[ext_resource type="Texture2D" uid="uid://sut0h477y2wi" path="res://MainDrinkPicturesDrawings/pixil-layer-5.png" id="8_wdahv"]
+[ext_resource type="Texture2D" uid="uid://timo844n2skg" path="res://MainDrinkPicturesDrawings/pixil-layer-7.png" id="9_6wlkh"]
+
+[node name="mainDrink" type="Sprite2D" unique_id=1457769839]
+texture_filter = 1
+script = ExtResource("2_3eadh")
+
+[node name="drinkOutline" type="TextureRect" parent="." unique_id=768066301]
+visible = false
+z_index = 7
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_7xlvn")
+
+[node name="addedTea" type="TextureRect" parent="." unique_id=373534387]
+visible = false
+z_index = 1
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("3_bqngi")
+
+[node name="addedWhippedCream" type="TextureRect" parent="." unique_id=1838374349]
+visible = false
+z_index = 2
+texture_filter = 1
+offset_top = -2.0
+offset_right = 100.0
+offset_bottom = 100.116455
+texture = ExtResource("4_k2rwk")
+
+[node name="addedBoba" type="TextureRect" parent="." unique_id=359646733]
+visible = false
+light_mask = 0
+z_index = 2
+texture_filter = 1
+offset_top = 1.0
+offset_right = 100.0
+offset_bottom = 101.0
+texture = ExtResource("5_qicav")
+
+[node name="strawOutline" type="TextureRect" parent="." unique_id=389654089]
+visible = false
+offset_top = -1.0
+offset_right = 100.0
+offset_bottom = 99.0
+texture = ExtResource("6_tya4l")
+
+[node name="addedPudding" type="TextureRect" parent="." unique_id=1815933567]
+visible = false
+z_index = 4
+texture_filter = 1
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 99.0
+offset_bottom = 98.0
+texture = ExtResource("7_msr0w")
+
+[node name="addedJelly" type="TextureRect" parent="." unique_id=293742640]
+visible = false
+z_index = 5
+texture_filter = 1
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 98.0
+offset_bottom = 99.0
+texture = ExtResource("8_wdahv")
+
+[node name="addedDrizzle" type="TextureRect" parent="." unique_id=1486167232]
+visible = false
+z_index = 6
+texture_filter = 1
+offset_right = 100.0
+offset_bottom = 100.0
+texture = ExtResource("9_6wlkh")
