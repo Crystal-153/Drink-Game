@@ -5,7 +5,7 @@ var counterTea=0
 var counterWhipped=0
 var counterPudding=0
 var counterDrizzle=0
-
+var counterJelly=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -55,8 +55,10 @@ func _on_ingredient_pudding_add_pudding() -> void:
 	else:
 		pudding.visible=false
 		counterPudding=0
+#diff var because I don't want to deal with i being messed up due to this (,:
 var j=(colors.size()-1)
 @onready var drizzle = $addedDrizzle
+#goes thru the colors backwards again but for the drizzle instead
 func _on_ingredient_drizzle_add_drizzle() -> void:
 	if counterDrizzle==0:
 		drizzle.visible=true
@@ -69,3 +71,14 @@ func _on_ingredient_drizzle_add_drizzle() -> void:
 		drizzle.visible=false
 		j=(colors.size()-1)
 		counterDrizzle=0
+@onready var jelly = $addedJelly
+func _on_ingredient_jelly_add_jelly() -> void:
+	if counterJelly==0:
+		jelly.visible=true
+		counterJelly+=1
+	elif counterJelly!=(colors.size()-1):
+		jelly.modulate=Color(colors[counterJelly])
+		counterJelly+=1
+	else:
+		jelly.visible=false
+		counterJelly=0

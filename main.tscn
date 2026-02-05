@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://cn7qbt3x7dk5u" path="res://ingredient_pudding.gd" id="9_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://cp0gywtq0wpj1" path="res://drink(main).tscn" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://py778e6a6028" path="res://ingredient_drizzle.gd" id="11_w48qg"]
+[ext_resource type="Script" uid="uid://yorj6sigfpet" path="res://ingredient_jelly.gd" id="13_vivmo"]
 
 [node name="Node" type="Node" unique_id=1421395882]
 
@@ -96,6 +97,7 @@ offset_bottom = 592.0
 texture_normal = ExtResource("8_2cqfq")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("13_vivmo")
 
 [node name="makingArea" type="TextureRect" parent="." unique_id=1331977361]
 texture_filter = 1
@@ -140,3 +142,5 @@ scale = Vector2(2, 2)
 [connection signal="pressed" from="ingredientPudding" to="ingredientPudding" method="_on_pressed"]
 [connection signal="add_drizzle" from="ingredientDrizzle" to="Node2D" method="_on_ingredient_drizzle_add_drizzle"]
 [connection signal="pressed" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_pressed"]
+[connection signal="add_jelly" from="ingredientJelly" to="Node2D" method="_on_ingredient_jelly_add_jelly"]
+[connection signal="pressed" from="ingredientJelly" to="ingredientJelly" method="_on_pressed"]
