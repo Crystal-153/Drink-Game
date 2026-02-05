@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cp0gywtq0wpj1"]
 
+[ext_resource type="Script" uid="uid://dj3vch5ryscab" path="res://drink(main).gd" id="1_aico8"]
 [ext_resource type="Texture2D" uid="uid://bc0jlge07fc3e" path="res://MainDrinkPicturesDrawings/pixil-layer-8.png" id="1_u8dwn"]
 [ext_resource type="Texture2D" uid="uid://b71apm72suxy4" path="res://MainDrinkPicturesDrawings/pixil-layer-2.png" id="2_aico8"]
 [ext_resource type="Texture2D" uid="uid://0axvu3ip8d75" path="res://MainDrinkPicturesDrawings/pixil-layer-3.png" id="3_w7esa"]
@@ -10,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://timo844n2skg" path="res://MainDrinkPicturesDrawings/pixil-layer-7.png" id="8_8qayk"]
 
 [node name="Node2D" type="Node2D" unique_id=228826666]
+script = ExtResource("1_aico8")
 
 [node name="drinkOutline" type="Sprite2D" parent="." unique_id=519379090]
 z_index = 6
@@ -17,16 +19,19 @@ texture_filter = 1
 texture = ExtResource("1_u8dwn")
 
 [node name="addedTea" type="Sprite2D" parent="." unique_id=27761852]
+visible = false
 z_index = 1
 texture_filter = 1
 texture = ExtResource("2_aico8")
 
 [node name="addedBoba" type="Sprite2D" parent="." unique_id=1801767537]
+visible = false
 z_index = 2
 texture_filter = 1
 texture = ExtResource("3_w7esa")
 
 [node name="addedWhippedCream" type="Sprite2D" parent="." unique_id=801122971]
+visible = false
 z_index = 2
 texture_filter = 1
 texture = ExtResource("4_khk5n")
@@ -36,16 +41,19 @@ texture_filter = 1
 texture = ExtResource("5_tlu8k")
 
 [node name="addedPudding" type="Sprite2D" parent="." unique_id=42326411]
+visible = false
 z_index = 3
 texture_filter = 1
 texture = ExtResource("6_susfe")
 
 [node name="addedJelly" type="Sprite2D" parent="." unique_id=1901733976]
+visible = false
 z_index = 4
 texture_filter = 1
 texture = ExtResource("7_tnd6t")
 
 [node name="addedDrizzle" type="Sprite2D" parent="." unique_id=882193955]
+visible = false
 z_index = 5
 texture_filter = 1
 texture = ExtResource("8_8qayk")

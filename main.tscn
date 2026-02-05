@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://fri2sqdhoukt" path="res://ingredient_boba.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b7i8brr32pwkt" path="res://CounterPicturesDrawings/pixil-layer-4.png" id="2_efxa6"]
 [ext_resource type="Texture2D" uid="uid://c7l7ntvhgda7h" path="res://CounterPicturesDrawings/pixil-layer-3.png" id="4_dg77c"]
+[ext_resource type="Script" uid="uid://bqqqbn55pf6qd" path="res://ingredient_tea_base.gd" id="5_efxa6"]
 [ext_resource type="Texture2D" uid="uid://x0i50he1ows1" path="res://CounterPicturesDrawings/pixil-layer-2.png" id="5_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://c4entan1sw5t4" path="res://CounterPicturesDrawings/pixil-layer-1.png" id="6_w48qg"]
 [ext_resource type="Texture2D" uid="uid://usbfwphnvdv3" path="res://CounterPicturesDrawings/pixil-layer-5.png" id="7_vivmo"]
@@ -18,7 +19,7 @@ offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.92941177, 0.8862745, 1, 1)
+color = Color(0.9508577, 0.9717404, 0.97661513, 1)
 
 [node name="counterTop" type="TextureRect" parent="." unique_id=113107902]
 texture_filter = 1
@@ -48,6 +49,7 @@ offset_bottom = 591.0
 texture_normal = ExtResource("4_dg77c")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("5_efxa6")
 
 [node name="ingredientWhippedCream" type="TextureButton" parent="." unique_id=1116205214]
 texture_filter = 1
@@ -119,7 +121,10 @@ offset_bottom = 610.0
 text = "Redo"
 
 [node name="Node2D" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
-position = Vector2(631, 498)
-scale = Vector2(2.4, 2.4)
+position = Vector2(633, 498)
+scale = Vector2(2, 2)
 
+[connection signal="add_Boba" from="ingredientBoba" to="Node2D" method="_on_ingredient_boba_add_boba"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]
+[connection signal="add_tea" from="ingredientTeaBase" to="Node2D" method="_on_ingredient_tea_base_add_tea"]
+[connection signal="pressed" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_pressed"]
