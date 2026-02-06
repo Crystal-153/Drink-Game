@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctho2678our1s"
-path="res://.godot/imported/homemade-tapioca-pearls-5-500x375.jpg.webp-07d56dc1e8ae16ac08fa1d6e1a5afb27.ctex"
+uid="uid://dud5nxp7qxwgy"
+path="res://.godot/imported/pixil-layer-0.png-bcf746bfcd277e0925ef550cc8db8dbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures for buttons/homemade-tapioca-pearls-5-500x375.jpg.webp"
-dest_files=["res://.godot/imported/homemade-tapioca-pearls-5-500x375.jpg.webp-07d56dc1e8ae16ac08fa1d6e1a5afb27.ctex"]
+source_file="res://buttonPictures/pixil-layer-0.png"
+dest_files=["res://.godot/imported/pixil-layer-0.png-bcf746bfcd277e0925ef550cc8db8dbf.ctex"]
 
 [params]
 

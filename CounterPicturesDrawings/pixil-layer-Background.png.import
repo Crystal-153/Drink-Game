@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ban4yeuksvw8o"
-path="res://.godot/imported/pngtree-dripping-chocolate-glaze-with-transparent-background-vector-png-image_6515951.png-76faa622ba5a50ffdbc634027b7f55a5.ctex"
+uid="uid://41rncrlhdj7a"
+path="res://.godot/imported/pixil-layer-Background.png-b19801da7a8d6b54d8431b3e0cae280a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures for buttons/pngtree-dripping-chocolate-glaze-with-transparent-background-vector-png-image_6515951.png"
-dest_files=["res://.godot/imported/pngtree-dripping-chocolate-glaze-with-transparent-background-vector-png-image_6515951.png-76faa622ba5a50ffdbc634027b7f55a5.ctex"]
+source_file="res://CounterPicturesDrawings/pixil-layer-Background.png"
+dest_files=["res://.godot/imported/pixil-layer-Background.png-b19801da7a8d6b54d8431b3e0cae280a.ctex"]
 
 [params]
 

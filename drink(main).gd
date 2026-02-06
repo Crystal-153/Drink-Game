@@ -1,10 +1,8 @@
 extends Node2D
 #Variablessssssss
 var counterBoba=0
-var counterTea=0
 var counterWhipped=0
 var counterPudding=0
-var counterDrizzle=0
 var counterJelly=0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,22 +18,20 @@ func _on_ingredient_boba_add_boba() -> void:
 		boba.visible = false
 		counterBoba=0
 #the color palaette used C:
-var colors=["ffbcabff", "ffc69eff", "ffe89eff", "e7ff9eff", "9effaeff", "9effefff", "9eddffff", "bdc1ffff", "dcbdffff", "ffbde8ff", "d4aa77ff", "241603ff", "120b06ff"]
+var colors=["ffffffff","ffbcabff", "ffc69eff", "ffe89eff", "e7ff9eff", "9effaeff", "9effefff", "9eddffff", "bdc1ffff", "dcbdffff", "ffbde8ff", "d4aa77ff", "241603ff", "120b06ff"]
 var i=(colors.size()-1)
 @onready var tea = $addedTea
 #tis function bacically ggoes through the colors and changes the color of it and when it ends it resets this one in pariticular goes backwards because the more normal tea colors are at the back
 func _on_ingredient_tea_base_add_tea() -> void:
-	if counterTea==0:
+	if i==(colors.size()-1):
 		tea.visible=true
-		counterTea+=1
-	elif counterTea!=(colors.size()-1):
+		
+	if i>=0:
 		tea.modulate=Color(colors[i])
 		i-=1
-		counterTea+=1
 	else:
 		tea.visible=false
 		i=(colors.size()-1)
-		counterTea=0
 @onready var whipped = $addedWhippedCream
 #This toggles whipped cream on and off as it doesnt change colors
 func _on_ingredient_whipped_cream_add_whipped() -> void:
@@ -60,18 +56,18 @@ var j=(colors.size()-1)
 @onready var drizzle = $addedDrizzle
 #goes thru the colors backwards again but for the drizzle instead
 func _on_ingredient_drizzle_add_drizzle() -> void:
-	if counterDrizzle==0:
+	if j==(colors.size()-1):
 		drizzle.visible=true
-		counterDrizzle+=1
-	elif counterDrizzle!=(colors.size()-1):
+		
+	if j>=0:
 		drizzle.modulate=Color(colors[j])
 		j-=1
-		counterDrizzle+=1
 	else:
 		drizzle.visible=false
 		j=(colors.size()-1)
-		counterDrizzle=0
 @onready var jelly = $addedJelly
+#the colors on the jelly go forward as jellys are fun colored
+#also didnt need a extra var as counter can be multifunctional lol
 func _on_ingredient_jelly_add_jelly() -> void:
 	if counterJelly==0:
 		jelly.visible=true

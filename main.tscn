@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpmrvciu2q13f"]
 
 [ext_resource type="Texture2D" uid="uid://buaav1pyb6vh" path="res://CounterPicturesDrawings/pixilart-drawing.png" id="1_4c57u"]
+[ext_resource type="Texture2D" uid="uid://41rncrlhdj7a" path="res://CounterPicturesDrawings/pixil-layer-Background.png" id="1_82xsv"]
 [ext_resource type="Script" uid="uid://fri2sqdhoukt" path="res://ingredient_boba.gd" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://b7i8brr32pwkt" path="res://CounterPicturesDrawings/pixil-layer-4.png" id="2_efxa6"]
 [ext_resource type="Texture2D" uid="uid://c7l7ntvhgda7h" path="res://CounterPicturesDrawings/pixil-layer-3.png" id="4_dg77c"]
@@ -15,21 +16,28 @@
 [ext_resource type="PackedScene" uid="uid://cp0gywtq0wpj1" path="res://drink(main).tscn" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://py778e6a6028" path="res://ingredient_drizzle.gd" id="11_w48qg"]
 [ext_resource type="Script" uid="uid://yorj6sigfpet" path="res://ingredient_jelly.gd" id="13_vivmo"]
+[ext_resource type="Texture2D" uid="uid://dud5nxp7qxwgy" path="res://buttonPictures/pixil-layer-0.png" id="16_getpj"]
+[ext_resource type="Texture2D" uid="uid://cn4xdd6egp2" path="res://buttonPictures/pixil-layer-1.png" id="17_ryguw"]
+[ext_resource type="Texture2D" uid="uid://j1ay2k0ep3wx" path="res://buttonPictures/pixil-layer-2.png" id="18_d13ii"]
+[ext_resource type="Texture2D" uid="uid://w5j431n54tae" path="res://buttonPictures/pixil-layer-3.png" id="19_1u8w0"]
 
 [node name="Node" type="Node" unique_id=1421395882]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1501283867]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=590443613]
+texture_filter = 1
 offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-color = Color(0.9508577, 0.9717404, 0.97661513, 1)
+texture = ExtResource("1_82xsv")
 
 [node name="counterTop" type="TextureRect" parent="." unique_id=113107902]
 texture_filter = 1
 offset_top = 322.0
 offset_right = 1159.0
 offset_bottom = 652.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("1_4c57u")
 expand_mode = 1
 
@@ -39,6 +47,8 @@ offset_left = 64.0
 offset_top = 384.0
 offset_right = 144.0
 offset_bottom = 464.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("2_efxa6")
 ignore_texture_size = true
 stretch_mode = 0
@@ -50,6 +60,8 @@ offset_left = 64.0
 offset_top = 512.0
 offset_right = 144.0
 offset_bottom = 591.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("4_dg77c")
 ignore_texture_size = true
 stretch_mode = 0
@@ -61,6 +73,8 @@ offset_left = 200.0
 offset_top = 384.0
 offset_right = 280.0
 offset_bottom = 464.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("5_ycdy4")
 ignore_texture_size = true
 stretch_mode = 0
@@ -72,6 +86,8 @@ offset_left = 200.0
 offset_top = 512.0
 offset_right = 280.0
 offset_bottom = 592.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("6_w48qg")
 ignore_texture_size = true
 stretch_mode = 0
@@ -83,6 +99,8 @@ offset_left = 336.0
 offset_top = 384.0
 offset_right = 416.0
 offset_bottom = 464.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("7_vivmo")
 ignore_texture_size = true
 stretch_mode = 0
@@ -94,6 +112,8 @@ offset_left = 336.0
 offset_top = 512.0
 offset_right = 416.0
 offset_bottom = 592.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture_normal = ExtResource("8_2cqfq")
 ignore_texture_size = true
 stretch_mode = 0
@@ -105,28 +125,45 @@ offset_left = 522.0
 offset_top = 391.0
 offset_right = 747.0
 offset_bottom = 616.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 texture = ExtResource("9_yaehf")
 
-[node name="serveButton" type="Button" parent="." unique_id=1376925781]
-offset_left = 817.0
-offset_top = 401.0
-offset_right = 1097.0
-offset_bottom = 458.0
-text = "Ready to serve!"
+[node name="serveButton" type="TextureButton" parent="." unique_id=820484716]
+texture_filter = 1
+offset_left = 828.0
+offset_top = 391.0
+offset_right = 1091.0
+offset_bottom = 457.0
+texture_normal = ExtResource("16_getpj")
+stretch_mode = 4
 
-[node name="undoButton" type="Button" parent="." unique_id=73116834]
-offset_left = 817.0
-offset_top = 474.0
-offset_right = 1097.0
+[node name="undoButton" type="TextureButton" parent="." unique_id=1149994316]
+texture_filter = 1
+offset_left = 828.0
+offset_top = 465.0
+offset_right = 1091.0
 offset_bottom = 531.0
-text = "Undo"
+texture_normal = ExtResource("17_ryguw")
+stretch_mode = 4
 
-[node name="redoButton" type="Button" parent="." unique_id=1511200930]
-offset_left = 817.0
-offset_top = 553.0
-offset_right = 1097.0
-offset_bottom = 610.0
-text = "Redo"
+[node name="redoButton" type="TextureButton" parent="." unique_id=1004834471]
+texture_filter = 1
+offset_left = 828.0
+offset_top = 465.0
+offset_right = 1091.0
+offset_bottom = 531.0
+texture_normal = ExtResource("18_d13ii")
+stretch_mode = 4
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1373103637]
+texture_filter = 1
+offset_left = 828.0
+offset_top = 539.0
+offset_right = 1091.0
+offset_bottom = 605.0
+texture_normal = ExtResource("19_1u8w0")
+stretch_mode = 4
 
 [node name="Node2D" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
 position = Vector2(633, 498)
@@ -134,13 +171,16 @@ scale = Vector2(2, 2)
 
 [connection signal="add_Boba" from="ingredientBoba" to="Node2D" method="_on_ingredient_boba_add_boba"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]
+[connection signal="add_tea" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_add_tea"]
 [connection signal="add_tea" from="ingredientTeaBase" to="Node2D" method="_on_ingredient_tea_base_add_tea"]
 [connection signal="pressed" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_pressed"]
 [connection signal="add_whipped" from="ingredientWhippedCream" to="Node2D" method="_on_ingredient_whipped_cream_add_whipped"]
 [connection signal="pressed" from="ingredientWhippedCream" to="ingredientWhippedCream" method="_on_pressed"]
 [connection signal="add_pudding" from="ingredientPudding" to="Node2D" method="_on_ingredient_pudding_add_pudding"]
 [connection signal="pressed" from="ingredientPudding" to="ingredientPudding" method="_on_pressed"]
+[connection signal="add_drizzle" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_add_drizzle"]
 [connection signal="add_drizzle" from="ingredientDrizzle" to="Node2D" method="_on_ingredient_drizzle_add_drizzle"]
 [connection signal="pressed" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_pressed"]
+[connection signal="add_jelly" from="ingredientJelly" to="ingredientJelly" method="_on_add_jelly"]
 [connection signal="add_jelly" from="ingredientJelly" to="Node2D" method="_on_ingredient_jelly_add_jelly"]
 [connection signal="pressed" from="ingredientJelly" to="ingredientJelly" method="_on_pressed"]

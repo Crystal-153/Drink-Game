@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ir6k8md45adu"
-path="res://.godot/imported/Screenshot 2026-02-03 at 10.00.38 PM.png-35f370822923550914bc608c4523f344.ctex"
+uid="uid://chfrhnyrn6m5r"
+path="res://.godot/imported/pixil-layer-1.png-02b9bbca8281cf4f710903aaa7675042.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures for buttons/Screenshot 2026-02-03 at 10.00.38 PM.png"
-dest_files=["res://.godot/imported/Screenshot 2026-02-03 at 10.00.38 PM.png-35f370822923550914bc608c4523f344.ctex"]
+source_file="res://CounterPicturesDrawings/pixilart-layers (3)/pixil-layer-1.png"
+dest_files=["res://.godot/imported/pixil-layer-1.png-02b9bbca8281cf4f710903aaa7675042.ctex"]
 
 [params]
 

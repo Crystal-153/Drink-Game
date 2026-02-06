@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bksabfdmhkkw0"
-path="res://.godot/imported/images.png-7b6296d3702dc62ea110e3b265e3bc2f.ctex"
+uid="uid://cvsqorlyi6ap"
+path="res://.godot/imported/pixil-layer-Background.png-2e9b54a3abb7caeed421c9bae1626e7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pictures for buttons/images.png"
-dest_files=["res://.godot/imported/images.png-7b6296d3702dc62ea110e3b265e3bc2f.ctex"]
+source_file="res://MainDrinkPicturesDrawings/pixil-layer-Background.png"
+dest_files=["res://.godot/imported/pixil-layer-Background.png-2e9b54a3abb7caeed421c9bae1626e7d.ctex"]
 
 [params]
 
