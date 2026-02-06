@@ -19,16 +19,21 @@
 [ext_resource type="Texture2D" uid="uid://dud5nxp7qxwgy" path="res://buttonPictures/pixil-layer-0.png" id="16_getpj"]
 [ext_resource type="Script" uid="uid://20qjq83lk63w" path="res://texture_button.gd" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://w5j431n54tae" path="res://buttonPictures/pixil-layer-3.png" id="19_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://8thh7bj6r3mr" path="res://images/pixil-layer-Layer 3.png" id="19_ryguw"]
+[ext_resource type="PackedScene" uid="uid://5viqq0qq516k" path="res://order.tscn" id="21_d13ii"]
+[ext_resource type="Script" uid="uid://24pa85wh5yfh" path="res://order.gd" id="22_1u8w0"]
 
 [node name="Node" type="Node" unique_id=1421395882]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=590443613]
+z_index = -2
 texture_filter = 1
 offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("1_82xsv")
+stretch_mode = 4
 
 [node name="counterTop" type="TextureRect" parent="." unique_id=113107902]
 texture_filter = 1
@@ -147,27 +152,39 @@ texture_normal = ExtResource("19_1u8w0")
 stretch_mode = 4
 script = ExtResource("18_cegan")
 
-[node name="Node2D" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
+[node name="customer" type="Sprite2D" parent="." unique_id=122157441]
+z_index = -1
+texture_filter = 1
+position = Vector2(575.5, 326)
+scale = Vector2(7.20625, 7.2444444)
+texture = ExtResource("19_ryguw")
+
+[node name="customDrink" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
 position = Vector2(633, 498)
 scale = Vector2(2, 2)
 
-[connection signal="add_Boba" from="ingredientBoba" to="Node2D" method="_on_ingredient_boba_add_boba"]
+[node name="order" parent="." unique_id=614222586 instance=ExtResource("21_d13ii")]
+position = Vector2(632, 166)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("22_1u8w0")
+
+[connection signal="add_Boba" from="ingredientBoba" to="customDrink" method="_on_ingredient_boba_add_boba"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]
 [connection signal="add_tea" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_add_tea"]
-[connection signal="add_tea" from="ingredientTeaBase" to="Node2D" method="_on_ingredient_tea_base_add_tea"]
+[connection signal="add_tea" from="ingredientTeaBase" to="customDrink" method="_on_ingredient_tea_base_add_tea"]
 [connection signal="pressed" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_pressed"]
-[connection signal="add_whipped" from="ingredientWhippedCream" to="Node2D" method="_on_ingredient_whipped_cream_add_whipped"]
+[connection signal="add_whipped" from="ingredientWhippedCream" to="customDrink" method="_on_ingredient_whipped_cream_add_whipped"]
 [connection signal="pressed" from="ingredientWhippedCream" to="ingredientWhippedCream" method="_on_pressed"]
-[connection signal="add_pudding" from="ingredientPudding" to="Node2D" method="_on_ingredient_pudding_add_pudding"]
+[connection signal="add_pudding" from="ingredientPudding" to="customDrink" method="_on_ingredient_pudding_add_pudding"]
 [connection signal="pressed" from="ingredientPudding" to="ingredientPudding" method="_on_pressed"]
 [connection signal="add_drizzle" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_add_drizzle"]
-[connection signal="add_drizzle" from="ingredientDrizzle" to="Node2D" method="_on_ingredient_drizzle_add_drizzle"]
+[connection signal="add_drizzle" from="ingredientDrizzle" to="customDrink" method="_on_ingredient_drizzle_add_drizzle"]
 [connection signal="pressed" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_pressed"]
 [connection signal="add_jelly" from="ingredientJelly" to="ingredientJelly" method="_on_add_jelly"]
-[connection signal="add_jelly" from="ingredientJelly" to="Node2D" method="_on_ingredient_jelly_add_jelly"]
+[connection signal="add_jelly" from="ingredientJelly" to="customDrink" method="_on_ingredient_jelly_add_jelly"]
 [connection signal="pressed" from="ingredientJelly" to="ingredientJelly" method="_on_pressed"]
 [connection signal="pressed" from="resetButton" to="resetButton" method="_on_pressed"]
 [connection signal="reset" from="resetButton" to="ingredientTeaBase" method="_on_reset_button_reset"]
 [connection signal="reset" from="resetButton" to="ingredientDrizzle" method="_on_reset_button_reset"]
 [connection signal="reset" from="resetButton" to="ingredientJelly" method="_on_reset_button_reset"]
-[connection signal="reset" from="resetButton" to="Node2D" method="_on_reset_button_reset"]
+[connection signal="reset" from="resetButton" to="customDrink" method="_on_reset_button_reset"]

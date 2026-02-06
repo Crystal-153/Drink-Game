@@ -24,7 +24,7 @@ func _on_add_drizzle() -> void:
 		self.modulate=Color("ffffffff")
 		i=(colors.size()-1)
 
-#resets tje preview when reset is clicked
+#resets the preview when reset is clicked
 func _on_reset_button_reset() -> void:
 	self.modulate=Color("ffffffff")
 	i=(colors.size()-1)
