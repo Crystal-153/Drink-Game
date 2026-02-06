@@ -23,3 +23,8 @@ func _on_add_tea() -> void:
 	else:
 		self.modulate=Color("ffffffff")
 		i=(colors.size()-1)
+
+#resets the preview when reset button is clicked
+func _on_reset_button_reset() -> void:
+	self.modulate=Color("ffffffff")
+	i=(colors.size()-1)

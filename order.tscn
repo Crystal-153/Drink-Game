@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://5viqq0qq516k"]
+
+[ext_resource type="Script" uid="uid://dj3vch5ryscab" path="res://drink(main).gd" id="1_7a65q"]
+[ext_resource type="Texture2D" uid="uid://bc0jlge07fc3e" path="res://MainDrinkPicturesDrawings/pixil-layer-8.png" id="2_6qcec"]
+[ext_resource type="Texture2D" uid="uid://b71apm72suxy4" path="res://MainDrinkPicturesDrawings/pixil-layer-2.png" id="3_fatxp"]
+[ext_resource type="Texture2D" uid="uid://0axvu3ip8d75" path="res://MainDrinkPicturesDrawings/pixil-layer-3.png" id="4_cl846"]
+[ext_resource type="Texture2D" uid="uid://ctxxu602fxky2" path="res://MainDrinkPicturesDrawings/pixil-layer-6.png" id="5_t1avy"]
+[ext_resource type="Texture2D" uid="uid://cofd6jh1nvgqw" path="res://MainDrinkPicturesDrawings/pixil-layer-1.png" id="6_ppsv3"]
+[ext_resource type="Texture2D" uid="uid://xc34kl0gyqld" path="res://MainDrinkPicturesDrawings/pixil-layer-4.png" id="7_xg632"]
+[ext_resource type="Texture2D" uid="uid://sut0h477y2wi" path="res://MainDrinkPicturesDrawings/pixil-layer-5.png" id="8_samaa"]
+[ext_resource type="Texture2D" uid="uid://timo844n2skg" path="res://MainDrinkPicturesDrawings/pixil-layer-7.png" id="9_ocv4i"]
+
+[node name="order" type="Node2D" unique_id=614222586]
+scale = Vector2(2, 2)
+script = ExtResource("1_7a65q")
+
+[node name="drinkOutline" type="Sprite2D" parent="." unique_id=52759990]
+z_index = 6
+texture_filter = 1
+texture = ExtResource("2_6qcec")
+
+[node name="addedTea" type="Sprite2D" parent="." unique_id=2026317090]
+visible = false
+z_index = 1
+texture_filter = 1
+texture = ExtResource("3_fatxp")
+
+[node name="addedBoba" type="Sprite2D" parent="." unique_id=1725878702]
+visible = false
+z_index = 2
+texture_filter = 1
+texture = ExtResource("4_cl846")
+
+[node name="addedWhippedCream" type="Sprite2D" parent="." unique_id=674363888]
+visible = false
+z_index = 2
+texture_filter = 1
+texture = ExtResource("5_t1avy")
+
+[node name="strawOutline" type="Sprite2D" parent="." unique_id=1687963130]
+texture_filter = 1
+texture = ExtResource("6_ppsv3")
+
+[node name="addedPudding" type="Sprite2D" parent="." unique_id=1208726912]
+visible = false
+z_index = 3
+texture_filter = 1
+texture = ExtResource("7_xg632")
+
+[node name="addedJelly" type="Sprite2D" parent="." unique_id=599972825]
+visible = false
+z_index = 4
+texture_filter = 1
+texture = ExtResource("8_samaa")
+
+[node name="addedDrizzle" type="Sprite2D" parent="." unique_id=779655392]
+visible = false
+z_index = 5
+texture_filter = 1
+texture = ExtResource("9_ocv4i")

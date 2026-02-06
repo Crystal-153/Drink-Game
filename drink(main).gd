@@ -78,3 +78,24 @@ func _on_ingredient_jelly_add_jelly() -> void:
 	else:
 		jelly.visible=false
 		counterJelly=0
+
+
+func _on_reset_button_reset() -> void:
+	tea.visible=false
+	boba.visible=false
+	whipped.visible=false
+	pudding.visible=false
+	drizzle.visible=false
+	jelly.visible=false
+	#for the tea
+	i=(colors.size()-1)
+	#for boba
+	counterBoba=0
+	#for whipped cream
+	counterWhipped=0
+	#for pudding
+	counterPudding=0
+	#for drizzle
+	j=(colors.size()-1)
+	#for jelly
+	counterJelly=0

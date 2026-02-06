@@ -17,8 +17,7 @@
 [ext_resource type="Script" uid="uid://py778e6a6028" path="res://ingredient_drizzle.gd" id="11_w48qg"]
 [ext_resource type="Script" uid="uid://yorj6sigfpet" path="res://ingredient_jelly.gd" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://dud5nxp7qxwgy" path="res://buttonPictures/pixil-layer-0.png" id="16_getpj"]
-[ext_resource type="Texture2D" uid="uid://cn4xdd6egp2" path="res://buttonPictures/pixil-layer-1.png" id="17_ryguw"]
-[ext_resource type="Texture2D" uid="uid://j1ay2k0ep3wx" path="res://buttonPictures/pixil-layer-2.png" id="18_d13ii"]
+[ext_resource type="Script" uid="uid://20qjq83lk63w" path="res://texture_button.gd" id="18_cegan"]
 [ext_resource type="Texture2D" uid="uid://w5j431n54tae" path="res://buttonPictures/pixil-layer-3.png" id="19_1u8w0"]
 
 [node name="Node" type="Node" unique_id=1421395882]
@@ -138,32 +137,15 @@ offset_bottom = 457.0
 texture_normal = ExtResource("16_getpj")
 stretch_mode = 4
 
-[node name="undoButton" type="TextureButton" parent="." unique_id=1149994316]
+[node name="resetButton" type="TextureButton" parent="." unique_id=1373103637]
 texture_filter = 1
 offset_left = 828.0
-offset_top = 465.0
+offset_top = 474.0
 offset_right = 1091.0
-offset_bottom = 531.0
-texture_normal = ExtResource("17_ryguw")
-stretch_mode = 4
-
-[node name="redoButton" type="TextureButton" parent="." unique_id=1004834471]
-texture_filter = 1
-offset_left = 828.0
-offset_top = 465.0
-offset_right = 1091.0
-offset_bottom = 531.0
-texture_normal = ExtResource("18_d13ii")
-stretch_mode = 4
-
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1373103637]
-texture_filter = 1
-offset_left = 828.0
-offset_top = 539.0
-offset_right = 1091.0
-offset_bottom = 605.0
+offset_bottom = 540.0
 texture_normal = ExtResource("19_1u8w0")
 stretch_mode = 4
+script = ExtResource("18_cegan")
 
 [node name="Node2D" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
 position = Vector2(633, 498)
@@ -184,3 +166,8 @@ scale = Vector2(2, 2)
 [connection signal="add_jelly" from="ingredientJelly" to="ingredientJelly" method="_on_add_jelly"]
 [connection signal="add_jelly" from="ingredientJelly" to="Node2D" method="_on_ingredient_jelly_add_jelly"]
 [connection signal="pressed" from="ingredientJelly" to="ingredientJelly" method="_on_pressed"]
+[connection signal="pressed" from="resetButton" to="resetButton" method="_on_pressed"]
+[connection signal="reset" from="resetButton" to="ingredientTeaBase" method="_on_reset_button_reset"]
+[connection signal="reset" from="resetButton" to="ingredientDrizzle" method="_on_reset_button_reset"]
+[connection signal="reset" from="resetButton" to="ingredientJelly" method="_on_reset_button_reset"]
+[connection signal="reset" from="resetButton" to="Node2D" method="_on_reset_button_reset"]

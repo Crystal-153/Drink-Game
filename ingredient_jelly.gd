@@ -23,3 +23,8 @@ func _on_add_jelly() -> void:
 	else:
 		self.modulate=Color("ffffffff")
 		i=0
+
+#resets the preview when rest is clicked
+func _on_reset_button_reset() -> void:
+	self.modulate=Color("ffffffff")
+	i=0
