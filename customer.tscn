@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c35hrsna5vxy3"]
+
+[ext_resource type="Texture2D" uid="uid://8thh7bj6r3mr" path="res://images/pixil-layer-Layer 3.png" id="1_r8ta2"]
+[ext_resource type="PackedScene" uid="uid://cp0gywtq0wpj1" path="res://drink(main).tscn" id="2_f7asb"]
+
+[node name="customer" type="Sprite2D" unique_id=611937403]
+z_index = -1
+texture_filter = 1
+scale = Vector2(7.20625, 7.2444444)
+texture = ExtResource("1_r8ta2")
+
+[node name="customDrink" parent="." unique_id=228826666 instance=ExtResource("2_f7asb")]
+position = Vector2(7.9791794, 23.742329)
+scale = Vector2(0.27753684, 0.2760736)

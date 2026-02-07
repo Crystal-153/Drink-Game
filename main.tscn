@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bpmrvciu2q13f"]
 
+[ext_resource type="Script" uid="uid://bfsbe41th7t60" path="res://main.gd" id="1_0odxb"]
 [ext_resource type="Texture2D" uid="uid://buaav1pyb6vh" path="res://CounterPicturesDrawings/pixilart-drawing.png" id="1_4c57u"]
 [ext_resource type="Texture2D" uid="uid://41rncrlhdj7a" path="res://CounterPicturesDrawings/pixil-layer-Background.png" id="1_82xsv"]
 [ext_resource type="Script" uid="uid://fri2sqdhoukt" path="res://ingredient_boba.gd" id="2_1bvp3"]
@@ -18,12 +19,18 @@
 [ext_resource type="Script" uid="uid://yorj6sigfpet" path="res://ingredient_jelly.gd" id="13_vivmo"]
 [ext_resource type="Texture2D" uid="uid://dud5nxp7qxwgy" path="res://buttonPictures/pixil-layer-0.png" id="16_getpj"]
 [ext_resource type="Script" uid="uid://20qjq83lk63w" path="res://texture_button.gd" id="18_cegan"]
+[ext_resource type="Script" uid="uid://mta2nwfccvo2" path="res://serve_button.gd" id="18_lswn8"]
 [ext_resource type="Texture2D" uid="uid://w5j431n54tae" path="res://buttonPictures/pixil-layer-3.png" id="19_1u8w0"]
 [ext_resource type="Texture2D" uid="uid://8thh7bj6r3mr" path="res://images/pixil-layer-Layer 3.png" id="19_ryguw"]
+[ext_resource type="Script" uid="uid://bdy4yjk0u82ko" path="res://customer.gd" id="21_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://5viqq0qq516k" path="res://order.tscn" id="21_d13ii"]
 [ext_resource type="Script" uid="uid://24pa85wh5yfh" path="res://order.gd" id="22_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://plborsevy18n" path="res://faces/pixil-layer-1.png" id="26_xuqvo"]
+[ext_resource type="Texture2D" uid="uid://npnwmyf2yvpn" path="res://faces/pixil-layer-2.png" id="27_qsp4k"]
+[ext_resource type="Texture2D" uid="uid://bgryf2nlycyqu" path="res://faces/pixil-layer-3.png" id="28_kq58d"]
 
 [node name="Node" type="Node" unique_id=1421395882]
+script = ExtResource("1_0odxb")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=590443613]
 z_index = -2
@@ -141,6 +148,7 @@ offset_right = 1091.0
 offset_bottom = 457.0
 texture_normal = ExtResource("16_getpj")
 stretch_mode = 4
+script = ExtResource("18_lswn8")
 
 [node name="resetButton" type="TextureButton" parent="." unique_id=1373103637]
 texture_filter = 1
@@ -152,22 +160,38 @@ texture_normal = ExtResource("19_1u8w0")
 stretch_mode = 4
 script = ExtResource("18_cegan")
 
+[node name="customDrink" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
+position = Vector2(632.9999, 498)
+scale = Vector2(1.9999996, 1.9999996)
+
 [node name="customer" type="Sprite2D" parent="." unique_id=122157441]
 z_index = -1
 texture_filter = 1
-position = Vector2(575.5, 326)
-scale = Vector2(7.20625, 7.2444444)
+position = Vector2(575.50006, 648)
+scale = Vector2(7.20625, 7.244445)
 texture = ExtResource("19_ryguw")
+script = ExtResource("21_1u8w0")
 
-[node name="customDrink" parent="." unique_id=228826666 instance=ExtResource("10_4c57u")]
-position = Vector2(633, 498)
-scale = Vector2(2, 2)
-
-[node name="order" parent="." unique_id=614222586 instance=ExtResource("21_d13ii")]
-position = Vector2(632, 166)
-scale = Vector2(1.5, 1.5)
+[node name="order" parent="customer" unique_id=614222586 instance=ExtResource("21_d13ii")]
+position = Vector2(7.840416, -22.085888)
+scale = Vector2(0.20815265, 0.20705521)
 script = ExtResource("22_1u8w0")
 
+[node name="happyFace" type="Sprite2D" parent="customer" unique_id=2008890666]
+visible = false
+texture_filter = 1
+texture = ExtResource("26_xuqvo")
+
+[node name="midFace" type="Sprite2D" parent="customer" unique_id=448500643]
+visible = false
+texture_filter = 1
+texture = ExtResource("27_qsp4k")
+
+[node name="sadFace" type="Sprite2D" parent="customer" unique_id=150355166]
+visible = false
+texture = ExtResource("28_kq58d")
+
+[connection signal="customer_load" from="." to="customer" method="_on_node_customer_load"]
 [connection signal="add_Boba" from="ingredientBoba" to="customDrink" method="_on_ingredient_boba_add_boba"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]
 [connection signal="add_tea" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_add_tea"]
@@ -183,6 +207,8 @@ script = ExtResource("22_1u8w0")
 [connection signal="add_jelly" from="ingredientJelly" to="ingredientJelly" method="_on_add_jelly"]
 [connection signal="add_jelly" from="ingredientJelly" to="customDrink" method="_on_ingredient_jelly_add_jelly"]
 [connection signal="pressed" from="ingredientJelly" to="ingredientJelly" method="_on_pressed"]
+[connection signal="pressed" from="serveButton" to="serveButton" method="_on_pressed"]
+[connection signal="serve" from="serveButton" to="." method="_on_serve_button_serve"]
 [connection signal="pressed" from="resetButton" to="resetButton" method="_on_pressed"]
 [connection signal="reset" from="resetButton" to="ingredientTeaBase" method="_on_reset_button_reset"]
 [connection signal="reset" from="resetButton" to="ingredientDrizzle" method="_on_reset_button_reset"]

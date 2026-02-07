@@ -5,12 +5,8 @@ extends TextureButton
 func _ready() -> void:
 	pass # Replace with function body.
 
-signal add_Boba
-	
+
+signal serve
 
 func _on_pressed() -> void:
-	emit_signal("add_Boba")
-
-
-func _on_serve_button_pressed() -> void:
-	pass # Replace with function body.
+	emit_signal("serve")

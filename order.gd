@@ -10,7 +10,9 @@ var colors=["ffbcabff", "ffc69eff", "ffe89eff", "e7ff9eff", "9effaeff", "9effeff
 
 var random = 0
 # Called when the node enters the scene tree for the first time.
+#WHen the player opens up the customers order is displayed
 func _ready() -> void:
+	#this basically randomized evry aspect of the order except the tea , jelly, and drizzle must always be there bc it look ugly otherwise (I might randomize the visability of the jelly and drizzle but that is more coding for me T^T)
 	tea.visible=true
 	jelly.visible=true
 	drizzle.visible=true
