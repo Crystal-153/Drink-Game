@@ -38,3 +38,31 @@ func _ready() -> void:
 	else:
 		pudding.visible=true
 	
+
+
+func _on_node_customer_load() -> void:
+	#this basically randomized evry aspect of the order except the tea , jelly, and drizzle must always be there bc it look ugly otherwise (I might randomize the visability of the jelly and drizzle but that is more coding for me T^T)
+	tea.visible=true
+	jelly.visible=true
+	drizzle.visible=true
+	random=(randi() % colors.size())
+	tea.modulate=Color(colors[random])
+	random=(randi() % colors.size())
+	jelly.modulate=Color(colors[random])
+	random=(randi() % colors.size())
+	drizzle.modulate=Color(colors[random])
+	random=(randi() % 2)
+	if random==0:
+		boba.visible=false
+	else:
+		boba.visible=true
+	random=(randi() % 2)
+	if random==0:
+		whipped.visible=false
+	else:
+		whipped.visible=true
+	random=(randi() % 2)
+	if random==0:
+		pudding.visible=false
+	else:
+		pudding.visible=true

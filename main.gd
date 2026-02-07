@@ -4,7 +4,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
+#variables
 signal customer_load
 @onready var teaCustomer = $customer/order/addedTea
 @onready var teaDrink = $customDrink/addedTea
@@ -26,7 +26,9 @@ var checked=false
 @onready var mid =$customer/midFace
 @onready var sad=$customer/sadFace
 func _on_serve_button_serve() -> void:
+	#only if the check is false it will play this, so that it doesnt constantly play
 	if checked==false:
+		#This goes thru each index and campares and for the ones in which the color is only changes and visabiklity is not changed
 		for i in range(0,3):
 			if customerAdd[i].modulate==drinkAdd[i].modulate:
 				correct+=1
@@ -36,13 +38,16 @@ func _on_serve_button_serve() -> void:
 					correct+=1
 					
 			checked=true
+		#checked the face result if drink does not match
 		if correct==6:
 			happy.visible=true
 		elif correct>3:
 			mid.visible=true
 		else:
 			sad.visible=true
+	#small pause
 	await get_tree().create_timer(2).timeout
 	emit_signal("customer_load")
+	#resets the vars
 	checked=false
 	correct=0

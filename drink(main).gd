@@ -87,6 +87,9 @@ func _on_reset_button_reset() -> void:
 	pudding.visible=false
 	drizzle.visible=false
 	jelly.visible=false
+	tea.modulate=Color(0.0, 0.0, 0.0, 0.0)
+	drizzle.modulate=Color(0.0, 0.0, 0.0, 0.0)
+	jelly.modulate=Color(0.0, 0.0, 0.0, 0.0)
 	#for the tea
 	i=(colors.size()-1)
 	#for boba

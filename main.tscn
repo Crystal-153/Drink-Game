@@ -192,6 +192,7 @@ visible = false
 texture = ExtResource("28_kq58d")
 
 [connection signal="customer_load" from="." to="customer" method="_on_node_customer_load"]
+[connection signal="customer_load" from="." to="customer/order" method="_on_node_customer_load"]
 [connection signal="add_Boba" from="ingredientBoba" to="customDrink" method="_on_ingredient_boba_add_boba"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]
 [connection signal="add_tea" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_add_tea"]
