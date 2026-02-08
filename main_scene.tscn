@@ -207,6 +207,8 @@ texture = ExtResource("28_si2mt")
 [connection signal="customer_load" from="." to="customer" method="_on_node_customer_load"]
 [connection signal="customer_load" from="." to="customer/order" method="_on_node_customer_load"]
 [connection signal="add_Boba" from="ingredientBoba" to="customDrink" method="_on_ingredient_boba_add_boba"]
+[connection signal="mouse_entered" from="ingredientBoba" to="ingredientBoba" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ingredientBoba" to="ingredientBoba" method="_on_mouse_exited"]
 [connection signal="pressed" from="ingredientBoba" to="ingredientBoba" method="_on_pressed"]
 [connection signal="add_tea" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_add_tea"]
 [connection signal="add_tea" from="ingredientTeaBase" to="customDrink" method="_on_ingredient_tea_base_add_tea"]

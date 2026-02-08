@@ -12,5 +12,10 @@ func _on_pressed() -> void:
 	emit_signal("add_Boba")
 
 
-func _on_serve_button_pressed() -> void:
-	pass # Replace with function body.
+@onready var cursorBoba=preload("res://cursors/pixil-layer-0.png")
+func _on_mouse_entered() -> void:
+	Input.set_custom_mouse_cursor(cursorBoba,Input.CURSOR_ARROW,Vector2(16, 16))
+
+
+func _on_mouse_exited() -> void:
+	Input.set_custom_mouse_cursor(null)
