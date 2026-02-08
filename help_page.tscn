@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cbevuehljtk16" path="res://helpPagePics/pixil-layer-0.png" id="1_a28ow"]
 [ext_resource type="Texture2D" uid="uid://b6habw7nkkf2a" path="res://helpPagePics/pixil-layer-1-2.png" id="2_kfmcj"]
+[ext_resource type="Script" uid="uid://kjpxkgrtnrnv" path="res://back_button.gd" id="3_kfmcj"]
 
 [node name="helpPage" type="Node" unique_id=864151001]
 
@@ -19,3 +20,6 @@ offset_right = 648.0
 offset_bottom = 517.0
 texture_normal = ExtResource("2_kfmcj")
 stretch_mode = 4
+script = ExtResource("3_kfmcj")
+
+[connection signal="pressed" from="backButton" to="backButton" method="_on_pressed"]

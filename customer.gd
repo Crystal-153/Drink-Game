@@ -2,10 +2,11 @@ extends Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
+	drink.visible=false
 	var tween=get_tree().create_tween()
 	tween.tween_property(self, "position", Vector2(575.5,330),1).set_trans(Tween.TRANS_LINEAR)
-
+	await tween.finished
+	drink.visible=true
 @onready var happy=$happyFace
 @onready var mid=$midFace
 @onready var sad = $sadFace

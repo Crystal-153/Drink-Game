@@ -20,8 +20,10 @@
 [ext_resource type="Script" uid="uid://mta2nwfccvo2" path="res://serve_button.gd" id="18_jip8q"]
 [ext_resource type="Texture2D" uid="uid://w5j431n54tae" path="res://buttonPictures/pixil-layer-3.png" id="19_euc68"]
 [ext_resource type="Script" uid="uid://20qjq83lk63w" path="res://texture_button.gd" id="20_38t8r"]
+[ext_resource type="Texture2D" uid="uid://c20iw0hl3kij0" path="res://helpPagePics/pixil-frame-0 (2).png" id="21_j8kkg"]
 [ext_resource type="PackedScene" uid="uid://cp0gywtq0wpj1" path="res://drink(main).tscn" id="21_jef5d"]
 [ext_resource type="Texture2D" uid="uid://8thh7bj6r3mr" path="res://images/pixil-layer-Layer 3.png" id="22_q1yuq"]
+[ext_resource type="Script" uid="uid://deeq70vbsagee" path="res://help_button.gd" id="22_yh4yk"]
 [ext_resource type="Script" uid="uid://bdy4yjk0u82ko" path="res://customer.gd" id="23_uacds"]
 [ext_resource type="PackedScene" uid="uid://5viqq0qq516k" path="res://order.tscn" id="24_y0lqw"]
 [ext_resource type="Script" uid="uid://24pa85wh5yfh" path="res://order.gd" id="25_c5xsv"]
@@ -154,12 +156,22 @@ script = ExtResource("18_jip8q")
 [node name="resetButton" type="TextureButton" parent="." unique_id=2090852171]
 texture_filter = 1
 offset_left = 828.0
-offset_top = 474.0
+offset_top = 467.0
 offset_right = 1091.0
-offset_bottom = 540.0
+offset_bottom = 533.0
 texture_normal = ExtResource("19_euc68")
 stretch_mode = 4
 script = ExtResource("20_38t8r")
+
+[node name="helpButton" type="TextureButton" parent="." unique_id=207965093]
+texture_filter = 1
+offset_left = 828.0
+offset_top = 543.0
+offset_right = 1091.0
+offset_bottom = 609.0
+texture_normal = ExtResource("21_j8kkg")
+stretch_mode = 4
+script = ExtResource("22_yh4yk")
 
 [node name="customDrink" parent="." unique_id=228826666 instance=ExtResource("21_jef5d")]
 position = Vector2(632.9999, 498)
@@ -216,3 +228,4 @@ texture = ExtResource("28_si2mt")
 [connection signal="reset" from="resetButton" to="ingredientDrizzle" method="_on_reset_button_reset"]
 [connection signal="reset" from="resetButton" to="ingredientJelly" method="_on_reset_button_reset"]
 [connection signal="reset" from="resetButton" to="customDrink" method="_on_reset_button_reset"]
+[connection signal="pressed" from="helpButton" to="helpButton" method="_on_pressed"]
