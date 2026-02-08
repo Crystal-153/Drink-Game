@@ -15,9 +15,11 @@
 [ext_resource type="Texture2D" uid="uid://usbfwphnvdv3" path="res://CounterPicturesDrawings/pixil-layer-5.png" id="12_xy6fp"]
 [ext_resource type="Script" uid="uid://py778e6a6028" path="res://ingredient_drizzle.gd" id="13_uws2o"]
 [ext_resource type="Texture2D" uid="uid://hv20qf56sdne" path="res://CounterPicturesDrawings/pixil-layer-0.png" id="14_iylel"]
+[ext_resource type="Texture2D" uid="uid://ckj4roqo8eaqc" path="res://cursors/pixil-layer-2.png" id="15_o4fqm"]
 [ext_resource type="Script" uid="uid://yorj6sigfpet" path="res://ingredient_jelly.gd" id="15_yj5sn"]
 [ext_resource type="Texture2D" uid="uid://dega7jp5e30tg" path="res://MainDrinkPicturesDrawings/pixil-layer-0.png" id="16_jtbqm"]
 [ext_resource type="Texture2D" uid="uid://dud5nxp7qxwgy" path="res://buttonPictures/pixil-layer-0.png" id="17_ek5vw"]
+[ext_resource type="Texture2D" uid="uid://cl7dg1rjtebhf" path="res://cursors/pixil-layer-5.png" id="18_gfmxp"]
 [ext_resource type="Script" uid="uid://mta2nwfccvo2" path="res://serve_button.gd" id="18_jip8q"]
 [ext_resource type="Texture2D" uid="uid://w5j431n54tae" path="res://buttonPictures/pixil-layer-3.png" id="19_euc68"]
 [ext_resource type="Script" uid="uid://20qjq83lk63w" path="res://texture_button.gd" id="20_38t8r"]
@@ -126,6 +128,9 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("13_uws2o")
 
+[node name="cursor" type="Sprite2D" parent="ingredientDrizzle" unique_id=1929986333]
+texture = ExtResource("15_o4fqm")
+
 [node name="ingredientJelly" type="TextureButton" parent="." unique_id=2020921765]
 texture_filter = 1
 offset_left = 336.0
@@ -138,6 +143,9 @@ texture_normal = ExtResource("14_iylel")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("15_yj5sn")
+
+[node name="cursor" type="Sprite2D" parent="ingredientJelly" unique_id=1740065659]
+texture = ExtResource("18_gfmxp")
 
 [node name="makingArea" type="TextureRect" parent="." unique_id=698456300]
 texture_filter = 1
@@ -222,14 +230,22 @@ texture = ExtResource("28_si2mt")
 [connection signal="mouse_exited" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_mouse_exited"]
 [connection signal="pressed" from="ingredientTeaBase" to="ingredientTeaBase" method="_on_pressed"]
 [connection signal="add_whipped" from="ingredientWhippedCream" to="customDrink" method="_on_ingredient_whipped_cream_add_whipped"]
+[connection signal="mouse_entered" from="ingredientWhippedCream" to="ingredientWhippedCream" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ingredientWhippedCream" to="ingredientWhippedCream" method="_on_mouse_exited"]
 [connection signal="pressed" from="ingredientWhippedCream" to="ingredientWhippedCream" method="_on_pressed"]
 [connection signal="add_pudding" from="ingredientPudding" to="customDrink" method="_on_ingredient_pudding_add_pudding"]
+[connection signal="mouse_entered" from="ingredientPudding" to="ingredientPudding" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ingredientPudding" to="ingredientPudding" method="_on_mouse_exited"]
 [connection signal="pressed" from="ingredientPudding" to="ingredientPudding" method="_on_pressed"]
 [connection signal="add_drizzle" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_add_drizzle"]
 [connection signal="add_drizzle" from="ingredientDrizzle" to="customDrink" method="_on_ingredient_drizzle_add_drizzle"]
+[connection signal="mouse_entered" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_mouse_exited"]
 [connection signal="pressed" from="ingredientDrizzle" to="ingredientDrizzle" method="_on_pressed"]
 [connection signal="add_jelly" from="ingredientJelly" to="ingredientJelly" method="_on_add_jelly"]
 [connection signal="add_jelly" from="ingredientJelly" to="customDrink" method="_on_ingredient_jelly_add_jelly"]
+[connection signal="mouse_entered" from="ingredientJelly" to="ingredientJelly" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ingredientJelly" to="ingredientJelly" method="_on_mouse_exited"]
 [connection signal="pressed" from="ingredientJelly" to="ingredientJelly" method="_on_pressed"]
 [connection signal="pressed" from="serveButton" to="serveButton" method="_on_pressed"]
 [connection signal="serve" from="serveButton" to="." method="_on_serve_button_serve"]

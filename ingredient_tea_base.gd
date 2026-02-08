@@ -3,11 +3,10 @@ extends TextureButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	cursorTea.visible=false
 
 signal add_tea
 @onready var cursorTea= $cursor
-@onready var cursorTeaText= $cursor.texture
 var cursor=false
 var colors=["ffbcabff", "ffc69eff", "ffe89eff", "e7ff9eff", "9effaeff", "9effefff", "9eddffff", "bdc1ffff", "dcbdffff", "ffbde8ff", "d4aa77ff", "241603ff", "120b06ff"]
 
