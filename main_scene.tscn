@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvxoqkocqh2f0"]
 
 [ext_resource type="Script" uid="uid://d0akqm0ofwyu" path="res://node.gd" id="1_o7u2a"]
-[ext_resource type="Texture2D" uid="uid://41rncrlhdj7a" path="res://CounterPicturesDrawings/pixil-layer-Background.png" id="2_ijoax"]
+[ext_resource type="Texture2D" uid="uid://ccye2wy1y71et" path="res://CounterPicturesDrawings/pixil-frame-0.png" id="2_o7u2a"]
 [ext_resource type="Texture2D" uid="uid://buaav1pyb6vh" path="res://CounterPicturesDrawings/pixilart-drawing.png" id="3_j8kkg"]
 [ext_resource type="Texture2D" uid="uid://b7i8brr32pwkt" path="res://CounterPicturesDrawings/pixil-layer-4.png" id="4_yh4yk"]
 [ext_resource type="Script" uid="uid://fri2sqdhoukt" path="res://ingredient_boba.gd" id="5_p8s74"]
@@ -32,14 +32,14 @@
 [node name="mainScene" type="Node" unique_id=1116201008]
 script = ExtResource("1_o7u2a")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1195104240]
+[node name="background" type="TextureRect" parent="." unique_id=1195104240]
 z_index = -2
 texture_filter = 1
 offset_right = 1152.0
 offset_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource("2_ijoax")
+texture = ExtResource("2_o7u2a")
 stretch_mode = 4
 
 [node name="counterTop" type="TextureRect" parent="." unique_id=830597047]

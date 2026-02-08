@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://dpsid0lvx3blb"]
 
+[ext_resource type="Texture2D" uid="uid://1augpuu223hx" path="res://startPagePics/pixil-layer-0.png" id="1_vpbt2"]
+[ext_resource type="Texture2D" uid="uid://dq7blsu40qp87" path="res://startPagePics/pixil-layer-1.png" id="2_3rauw"]
+
 [node name="startingPage" type="Node" unique_id=1565009645]
+
+[node name="background" type="TextureRect" parent="." unique_id=536467752]
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_vpbt2")
+
+[node name="enterButton" type="TextureButton" parent="." unique_id=1921881382]
+texture_filter = 1
+offset_left = 402.0
+offset_top = 322.0
+offset_right = 742.0
+offset_bottom = 431.0
+texture_normal = ExtResource("2_3rauw")
+stretch_mode = 4
