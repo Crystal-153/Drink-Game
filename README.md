@@ -4,11 +4,9 @@
 <!-- ABOUT -->
 ## About The Project
 
-<!--
-You serve the customers their drinks. if you get everything correct they are happy, if it is less they will be annoyed or angry. there is a help section and start page. the ingredients should preview the next color. The orders will always have a tea, drizzle, and jelly. I hope the art isn't too bad since I drew it on my computer. This is also my first game and hackclub thing. I hope you like it!!:DDD
--->
-
-
+<h1>"You serve the customers their drinks. if you get everything correct they are happy, if it is less they will be annoyed or angry. there is a help section and start page. the ingredients should preview the next color. The orders will always have a tea, drizzle, and jelly. I hope the art isn't too bad since I drew it on my computer. This is also my first game and hackclub thing. I hope you like it!!:DDD</h1>
+<h1>""</h1>
+<h2>"This game is web based you you can acess it on itch.io </h2>
 
 
 <!-- SHIELDS -->
