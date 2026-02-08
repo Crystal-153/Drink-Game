@@ -59,6 +59,84 @@ texture = ExtResource("3_j8kkg")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
+[node name="bobaLabel" type="Label" parent="counterTop" unique_id=8561465]
+texture_filter = 1
+layout_mode = 0
+offset_left = 85.0
+offset_top = 142.0
+offset_right = 130.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 25
+text = "BOBA"
+
+[node name="whippedCreamLabel" type="Label" parent="counterTop" unique_id=1187001507]
+texture_filter = 1
+layout_mode = 0
+offset_left = 207.0
+offset_top = 142.0
+offset_right = 276.0
+offset_bottom = 179.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_constants/line_spacing = -7
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 25
+text = "WHIPPED
+CREAM"
+horizontal_alignment = 1
+
+[node name="drizzleLabel" type="Label" parent="counterTop" unique_id=1944083804]
+texture_filter = 1
+layout_mode = 0
+offset_left = 336.0
+offset_top = 142.0
+offset_right = 416.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 25
+text = "DRIZZLE"
+horizontal_alignment = 1
+
+[node name="teaLabel" type="Label" parent="counterTop" unique_id=2056705575]
+texture_filter = 1
+layout_mode = 0
+offset_left = 64.0
+offset_top = 269.0
+offset_right = 144.0
+offset_bottom = 292.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 25
+text = "TEA"
+horizontal_alignment = 1
+
+[node name="puddingLabel" type="Label" parent="counterTop" unique_id=685746513]
+texture_filter = 1
+layout_mode = 0
+offset_left = 200.0
+offset_top = 270.0
+offset_right = 280.0
+offset_bottom = 293.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 25
+text = "PUDDING"
+horizontal_alignment = 1
+
+[node name="jellyLabel" type="Label" parent="counterTop" unique_id=1009498200]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 270.0
+offset_right = 416.0
+offset_bottom = 293.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 25
+text = "JELLY"
+horizontal_alignment = 1
+
 [node name="ingredientBoba" type="TextureButton" parent="." unique_id=189161826]
 texture_filter = 1
 offset_left = 64.0
@@ -130,6 +208,7 @@ stretch_mode = 0
 script = ExtResource("13_uws2o")
 
 [node name="cursor" type="Sprite2D" parent="ingredientDrizzle" unique_id=1929986333]
+position = Vector2(-450, 114)
 texture = ExtResource("15_o4fqm")
 
 [node name="ingredientJelly" type="TextureButton" parent="." unique_id=2020921765]
