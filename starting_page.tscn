@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://1augpuu223hx" path="res://startPagePics/pixil-layer-0.png" id="1_vpbt2"]
 [ext_resource type="Texture2D" uid="uid://dq7blsu40qp87" path="res://startPagePics/pixil-layer-1.png" id="2_3rauw"]
+[ext_resource type="Script" uid="uid://cybah3wm5u6rb" path="res://enter_button.gd" id="3_3rauw"]
 
 [node name="startingPage" type="Node" unique_id=1565009645]
 
@@ -19,3 +20,6 @@ offset_right = 742.0
 offset_bottom = 431.0
 texture_normal = ExtResource("2_3rauw")
 stretch_mode = 4
+script = ExtResource("3_3rauw")
+
+[connection signal="pressed" from="enterButton" to="enterButton" method="_on_pressed"]
