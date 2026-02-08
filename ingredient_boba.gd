@@ -12,7 +12,7 @@ func _on_pressed() -> void:
 	emit_signal("add_Boba")
 
 
-@onready var cursorBoba=preload("res://cursors/pixil-layer-0.png")
+var cursorBoba=preload("res://cursors/pixil-layer-0.png")
 func _on_mouse_entered() -> void:
 	Input.set_custom_mouse_cursor(cursorBoba,Input.CURSOR_ARROW,Vector2(16, 16))
 
