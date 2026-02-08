@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://plborsevy18n" path="res://faces/pixil-layer-1.png" id="26_84x1k"]
 [ext_resource type="Texture2D" uid="uid://npnwmyf2yvpn" path="res://faces/pixil-layer-2.png" id="27_0hwxg"]
 [ext_resource type="Texture2D" uid="uid://bgryf2nlycyqu" path="res://faces/pixil-layer-3.png" id="28_si2mt"]
+[ext_resource type="FontFile" uid="uid://cxbjdtkbp3teh" path="res://m5x7.ttf" id="34_gfmxp"]
 
 [node name="mainScene" type="Node" unique_id=1116201008]
 script = ExtResource("1_o7u2a")
@@ -218,8 +219,23 @@ texture = ExtResource("27_0hwxg")
 visible = false
 texture = ExtResource("28_si2mt")
 
+[node name="pointScore" type="Label" parent="." unique_id=1516914587]
+texture_filter = 1
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 267.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+theme_override_fonts/font = ExtResource("34_gfmxp")
+theme_override_font_sizes/font_size = 31
+text = "Happy customers: 0
+Annoyed customers: 0
+Sad/Angry customers: 0
+Combo: 0"
+
 [connection signal="customer_load" from="." to="customer" method="_on_node_customer_load"]
 [connection signal="customer_load" from="." to="customer/order" method="_on_node_customer_load"]
+[connection signal="customer_served" from="." to="." method="_on_customer_served"]
 [connection signal="add_Boba" from="ingredientBoba" to="customDrink" method="_on_ingredient_boba_add_boba"]
 [connection signal="mouse_entered" from="ingredientBoba" to="ingredientBoba" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ingredientBoba" to="ingredientBoba" method="_on_mouse_exited"]

@@ -41,13 +41,35 @@ func _on_serve_button_serve() -> void:
 		#checked the face result if drink does not match
 		if correct==6:
 			happy.visible=true
+			happyPoints+=1
 		elif correct>3:
 			mid.visible=true
+			midPoints+=1
 		else:
 			sad.visible=true
+			sadPoints+=1
 	#small pause
 	await get_tree().create_timer(2).timeout
 	emit_signal("customer_load")
+	emit_signal("customer_served")
 	#resets the vars
 	checked=false
 	correct=0
+	
+	
+#point system
+var happyPoints=0
+var midPoints=0
+var sadPoints=0
+@onready var pointLabel=$pointScore
+signal customer_served
+var combo=0
+
+
+func _on_customer_served() -> void:
+	if correct==6:
+		combo+=1
+	else:
+		combo=0
+	pointLabel.text="Happy customers: "+str(happyPoints)+ "\nAnnoyed customers: "+str(midPoints)+"\nSad/Angry customers: "+str(sadPoints)+"\nCombo: "+str(combo)
+	

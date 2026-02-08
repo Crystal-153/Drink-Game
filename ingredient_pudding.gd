@@ -12,8 +12,6 @@ func _on_pressed() -> void:
 	emit_signal("add_pudding")
 
 
-
-
 func _on_mouse_entered() -> void:
 	Input.set_custom_mouse_cursor(cursor,Input.CURSOR_ARROW,Vector2(16,16))
 
