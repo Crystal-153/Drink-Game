@@ -1,5 +1,16 @@
 <a id="readme-top"></a>
 
+
+<!-- ABOUT -->
+## About The Project
+
+<!--
+You serve the customers their drinks. if you get everything correct they are happy, if it is less they will be annoyed or angry. there is a help section and start page. the ingredients should preview the next color. The orders will always have a tea, drizzle, and jelly. I hope the art isn't too bad since I drew it on my computer. This is also my first game and hackclub thing. I hope you like it!!:DDD
+-->
+
+
+
+
 <!-- SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -50,8 +61,11 @@
 </details>
 
 
-<!-- ABOUT -->
-## About The Project
+
+
+
+
+
 <br />
 
 [![Product Screenshot][product-screenshot]](https://waka.hackclub.com)
