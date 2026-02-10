@@ -7,8 +7,12 @@
 <h1>You serve the customers their drinks. if you get everything correct they are happy, if it is less they will be annoyed or angry. there is a help section and start page. the ingredients should preview the next color. The orders will always have a tea, drizzle, and jelly. I hope the art isn't too bad since I drew it on my computer. This is also my first game and hackclub thing. I hope you like it!!:DDD</h1>
 <h1></h1>
 <h2>This game is web based you you can acess it on itch.io </h2>
+<h2>
+</h2>
 
 
+<h1>How to play</h1>
+<h2> Click the start button and enter the game. the main putpose is to: Serve your customers their drinks. Click the ingredients to toggle them on and off. Click the tea, jelly, and drizzle to change the colors. The ingredient boxes will turn a different color that previews the next one that applies when you click again. The customers order will always have a tea, jelly, and a drizzle. If you get everything the customer asks correct then you will get a happy face. If you get more than 3 items correct then you get an indifferent face. If you get 3 or less then you will get a sad face. You can see your stats in the left upper corner as well! </h2>
 <!-- SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
